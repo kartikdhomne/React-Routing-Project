@@ -1,32 +1,27 @@
 
 import './App.css';
-import SideBar from './SideBar/SideBar';
+import SideBar from './Components/SideBar/SideBar';
 import DetailsCollection from './DetailsCollection';
 import DocumentCollection from './DocumentCollection';
 import StatementofPurpose from './StatementofPurpose';
 import InterviewAvailability from './InterviewAvailability'
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import { useState } from 'react';
+import Header from './Components/Header';
 
 
 function App() {
+
+    const [next , setNext]= useState("/");
+    
   return (
     <div className="App">
-          <div className="demo">
-              <BrowserRouter>
-                  <div className="header">
-                     <form>
-                          <input checked type="radio" name='radio' className='radio' required />
-                          <label htmlFor="formselection"> Form Selection  &#8212;&#8212;&#8212;&#8212;</label>
-                          <input type="radio"  name='radio' className='radio' required/>
-                          <label htmlFor="setup">Set up  &#8212;&#8212;&#8212;&#8212;</label>
-                          <input type="radio" name='radio' className='radio' required/>
-                          <label htmlFor="formcreation">Form Creation  &#8212;&#8212;&#8212;&#8212;</label>
-                          <input type="radio" name='radio' className='radio' required/>
-                          <label htmlFor="review">Review</label>
-                          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <button>X</button>
-                     </form>
-                  </div>
 
+          <div className="demo">
+
+               <BrowserRouter>
+                 
+                      <Header/>
                       <SideBar/>
 
                   <div className="Heading">
@@ -43,15 +38,22 @@ function App() {
                       </div>
               
                         <Routes>
-                            <Route path="/" element={ <DetailsCollection/>} />
-                            <Route path="/DetailsCollection" element={ <DetailsCollection/>} />
-                            <Route path="/DocumentCollection" element={ <DocumentCollection/>} />
-                            <Route path="/InterviewAvailability" element={ <InterviewAvailability/>} />
-                            <Route path="/StatementofPurpose" element={ <StatementofPurpose/>} />
+                        
+                            <Route path="/" element={ <DetailsCollection setNext={setNext} />} />
+                            <Route path="/DetailsCollection" element={ <DetailsCollection setNext={setNext} />}/>
+                            <Route path="/DocumentCollection" element={ <DocumentCollection setNext={setNext} />} />
+                            <Route path="/InterviewAvailability" element={ <InterviewAvailability setNext={setNext} />} />
+                            <Route path="/StatementofPurpose" element={ <StatementofPurpose setNext={setNext} />} />
+                            
                         </Routes>
+
                     </div>
+
+                         <div className='footer'><Link to={next} ><button className='next-button'>NEXT</button></Link></div>
+                   
               </BrowserRouter>
-    </div>
+             
+          </div>
     </div>
    
   );

@@ -8,9 +8,9 @@ body{
 }
 
 .header{
-  Width :1359px;
-  height: 68px;
-    border-top: none;
+   Width :1359px;
+   height: 68px;
+   border-top: none;
    border-left: none;
    border-right: none;
    border-bottom: 2px solid grey;
@@ -39,7 +39,8 @@ body{
   width: 716px;
   height: 150px;
   margin-left:95px ;
-  background: rgba(26, 143, 230, 0.15);
+  /* background: rgba(15, 173, 235, 0.15); */
+  background: rgb(175, 218, 244);
   padding-top: 10px;
   padding-left: 36px;
   border-radius: 8px 8px 0px 0px;
@@ -75,8 +76,45 @@ li{
   border-radius: 4px;
   border: 2px solid grey;
 }
+#cross-btn:hover{
+color: rgb(61, 180, 254);
+transform: scale(1.2);
+}
+#cross-btn{
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
 
+.footer{
+  border-top: 2px solid grey;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  background-color: #fff;
+  Width :1358px;
+  height: 64px;
+  margin-top: 1030px;
+  margin-left: 70px;
+  text-align: right;
+}
 
+.next-button{
+  background:#1A8FE6;;
+  width: 109px;
+  height: 32px;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  margin-top: 15px;
+  margin-bottom: 17px;
+  margin-right: 43px;
+  cursor: pointer;
+}
+
+.next-button:hover{
+  transform: scale(1.1);
+}
 
 
 

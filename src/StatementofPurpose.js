@@ -1,6 +1,11 @@
-import React from 'react'
+import React,{useEffect} from 'react';
 
-export default function StatementofPurpose() {
+export default function StatementofPurpose({setNext}) {
+
+    useEffect (()=>{
+        setNext("/InterviewAvailability")
+     },[])
+
   return (
       <div className="col">
           <form className='Form-Body'>

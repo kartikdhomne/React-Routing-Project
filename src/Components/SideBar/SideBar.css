@@ -12,9 +12,13 @@ ul>li{
     height: 118px;
     border: 1px gray;
     list-style-type: none; 
+    
 }
 
 .btn:hover{
+    border: 3px solid rgb(61, 180, 254)
+}
+.btn:visited{
     border: 3px solid rgb(61, 180, 254)
 }
 

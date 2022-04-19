@@ -1,9 +1,14 @@
-import React from 'react'
+import React,{useEffect} from 'react';
 
-export default function DocumentCollection() {
+export default function DocumentCollection({setNext}) {
+
+  useEffect (()=>{
+    setNext("/StatementofPurpose");
+ },[])
+ 
   return (
        <div className="col">
-           <form className='Form-Body'>
+           <form className="Form-Body">
                 <li><label htmlFor="marksheet">1. 10th Marksheet*</label><br />
                 <input  className='input-box' type="text" placeholder='Attach file upto 5kb' /></li><br />
                 <li><label htmlFor="marksheet">2. 12th Marksheet*</label><br />
